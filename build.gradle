@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-//    id 'org.sonarqube' version "2.7"
+    id "org.sonarqube" version "3.4.0.2513"
     id 'jacoco'
 }
 
@@ -32,14 +32,10 @@ jacocoTestReport {
     }
 }
 
-//sonarqube {
-//    properties {
-//        property "sonar.java.coveragePlugin", "jacoco"
-//        property "sonar.jacoco.reportPath", "build/jacoco/test.exec"
-//        property "sonar.junit.reportsPath", "build/test-results/test"
-//        property "sonar.projectKey", "cb-${project.name}"
-//        property "sonar.projectName", "cb-${project.name}"
-//        property "sonar.scm.forceReloadAll", "true"
-//        property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/main.xml"
-//    }
-//}
+sonarqube {
+    properties {
+        property "sonar.projectKey", "bhos-qa_l3-sonarcloud-isgandarisgandarov"
+        property "sonar.organization", "bhos-qa"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
